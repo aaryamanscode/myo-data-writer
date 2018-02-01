@@ -67,8 +67,13 @@ void keyPressed() {
   }
   
   if(key == 'x') {
-    output.flush(); // Writes the remaining data to the file
-    output.close(); // Finishes the file
+    orientationWrite.flush();
+    emgWrite.flush();
+    gyroWrite.flush(); // Writes the remaining data to the file
+    
+    orientationWrite.close();
+    emgWrite.close(); 
+    gyroWrite.close(); // Finishes the file
     exit(); // Stops the program
   }
 }
